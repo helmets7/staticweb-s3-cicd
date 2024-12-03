@@ -14,6 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+  
     
 
       - name: Configure AWS credentials
@@ -28,3 +29,4 @@ jobs:
         run: |
           aws s3 cp ./index.html s3://pruebabucket-s3-cicd/index.html
           aws s3 cp ./prueba.pdf s3://pruebabucket-s3-cicd/prueba.pdf
+          ls
