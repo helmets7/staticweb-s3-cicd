@@ -2,8 +2,6 @@ name: deploy static website to AWS-S3
 
 on:
   push:
-    branches:
-      - main
   
 env:
   AWS_REGION: us-east-1
@@ -24,11 +22,5 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: ${{env.AWS_REGION}}
 
-      - name: List files before upload
-        run: |
-          ls -l ./ 
-          
       - name: Deploy to AWS S3
-        run: |
-          aws s3 cp ./index.html s3://pruebabucket-s3-cicd/index.html
-          aws s3 cp ./prueba.pdf s3://pruebabucket-s3-cicd/prueba.html
+        run: aws s3 cp ./index.html s3://pruebabucket-s3-cicd
