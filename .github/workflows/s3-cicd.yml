@@ -27,5 +27,6 @@ jobs:
 
       - name: Deploy to AWS S3
         run: |
+          ls
           chmod 755 s3://pruebabucket-s3-cicd/carpeta-prueba-pdfs/
           aws s3 cp ./prueba.pdf s3://pruebabucket-s3-cicd/carpeta-prueba-pdfs/prueba.pdf
