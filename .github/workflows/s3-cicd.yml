@@ -27,6 +27,5 @@ jobs:
 
       - name: Deploy to AWS S3
         run: |
-          aws s3 cp ./index.html s3://pruebabucket-s3-cicd/index.html
-          aws s3 cp ./prueba.pdf s3://pruebabucket-s3-cicd/prueba.pdf
           ls
+          aws s3 cp ./prueba.pdf s3://pruebabucket-s3-cicd/prueba.pdf
